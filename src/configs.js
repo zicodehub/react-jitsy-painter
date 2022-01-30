@@ -5,6 +5,7 @@ let conf = {
     enableEmailInStats: false,
     
     disableReactions: true,
+    startAudioOnly: false
 }
 
 export default conf

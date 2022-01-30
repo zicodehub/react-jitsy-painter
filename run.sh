@@ -1,1 +1,1 @@
-git remote add jg https://git.heroku.com/jitsy-zicode.git
+git remote add dev_org https://git.heroku.com/jitsy-zicode-goorm.git

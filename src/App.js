@@ -1,5 +1,14 @@
 import { JitsiMeeting } from '@jitsi/web-sdk';
 import React, { useRef, useState } from 'react';
+import CONFIG from './configs'
+import INTERFACE from './interface_configs'
+
+const AppStyle = {
+    display: "flex",
+    flexDirection: "column",
+    height: "100vh",
+    backgroundColor: 'red',
+}
 
 
 const App = () => {
@@ -42,9 +51,10 @@ const App = () => {
     };
 
     const handleJitsiIFrameRef1 = iframeRef => {
-        iframeRef.style.border = '10px solid cadetblue';
-        iframeRef.style.background = 'yellow';
-        iframeRef.style.height = '90%';
+        
+        let style  = iframeRef.style
+        style.height = "90%"
+        
     };
 
 
@@ -79,7 +89,7 @@ const App = () => {
 
 
     return (
-        <>
+        <div id="main" style={AppStyle} >
             <h1 style={{
                 fontFamily: 'sans-serif',
                 textAlign: 'center'
@@ -90,15 +100,11 @@ const App = () => {
                 spinner={renderSpinner}
                 onApiReady={externalApi => handleApiReady(externalApi, apiRef)}
                 getIFrameRef={handleJitsiIFrameRef1}
-                configOverwrite={{
-                    startWithAudioMuted: false,
-                    disableModeratorIndicator: true,
-                    startScreenSharing: false,
-                    enableEmailInStats: false
-                }}
+                configOverwrite={CONFIG}
+                interfaceConfigOverwrite={INTERFACE}
             />
 
-        </>
+        </div>
     );
 };
 

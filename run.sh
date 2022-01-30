@@ -1,0 +1,1 @@
+git remote add jg https://git.heroku.com/jitsy-zicode.git

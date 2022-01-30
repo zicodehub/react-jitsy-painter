@@ -4,3 +4,10 @@
     background: "blue" ;
     font-size: "30px" ;
 }
+
+form {
+    position: absolute ;
+        top : 30%;
+        left: 30%;
+    background: red ;
+}

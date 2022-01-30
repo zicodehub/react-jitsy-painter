@@ -1,1 +1,1 @@
-git remote add dev_org https://git.heroku.com/jitsy-zicode-goorm.git
+git remote add origin https://github.com/zicodehub/react-jitsy-painter.git
